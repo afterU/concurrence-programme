@@ -9,7 +9,12 @@ package com.hzw.study.jmm;
 public class DoubleCheckLock {
     /**
      * 查看汇编指令
+     * https://zhuanlan.zhihu.com/p/158168592?from_voters_page=true
      * -XX:+UnlockDiagnosticVMOptions -XX:+PrintAssembly -Xcomp
+     *
+     * -Xcomp : 让JVM以编译模式执行代码，即JVM会在第一次运行时即将所有字节码编译为本地代码
+     * -XX:+UnlockDiagnosticVMOptions : 解锁诊断功能
+     * -XX:+PrintAssembly : 输出反汇编后的汇编指令
      */
     private static DoubleCheckLock instance;
     private DoubleCheckLock(){}
@@ -28,6 +33,10 @@ public class DoubleCheckLock {
             }
         }
         return instance;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(DoubleCheckLock.getInstance());
     }
 
 }

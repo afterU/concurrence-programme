@@ -9,6 +9,7 @@ public class DumpMultiThread {
     public static void main(String[] args){
         /*
          *获取Java线程管理Bean
+         *
          */
         ThreadMXBean threadMXBean = ManagementFactory.getThreadMXBean();
         //仅仅获取线程与线程堆栈信息

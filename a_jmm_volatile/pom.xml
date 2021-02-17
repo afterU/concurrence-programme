@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId><![CDATA[a_jmm&volatile]]></artifactId>
+    <artifactId>a_jmm_volatile</artifactId>
 
 <!--    <module><![CDATA[JMM&volatile-vip-course01]]></module>-->
     <build>
